@@ -1,0 +1,41 @@
+* {
+box-sizing: border-box;
+}
+body {
+font-family: system-ui, sans-serif;
+padding: 20px;
+}
+.container {
+background: #eef0fb;
+border: 2px dashed #a5a9d6;
+padding: 10px;
+display: grid;
+grid-template-columns: repeat(3,100px);
+
+gap: 10px;
+}
+.item {
+background: #4f46e5;
+color: white;
+padding: 16px;
+border-radius: 8px;
+text-align: center;
+font-weight: bold;
+}
+
+.page {
+display: grid;
+grid-template-columns: 160px 1fr 140px;
+grid-template-rows: 60px 1fr 50px;
+grid-template-areas:
+"header header ads"
+"sidebar main ads"
+"footer footer footer";
+gap: 10px;
+min-height: 340px;
+}
+header { grid-area: header; }
+nav { grid-area: sidebar; }
+main { grid-area: main; }
+aside { grid-area: ads; }
+footer { grid-area: footer; }
